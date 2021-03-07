@@ -20,4 +20,4 @@ EXPOSE 25565
 RUN chmod +x /start.sh
 
 ENTRYPOINT ["/start.sh"]
-CMD ["1","1"]
+CMD ["2","2"]
