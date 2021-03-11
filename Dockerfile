@@ -3,6 +3,7 @@ FROM debian:buster-slim
 COPY ./server.properties /
 COPY ./start.sh /
 COPY ./eula.txt /
+COPY ./ops.txt /
 
 RUN apt-get update \
   && mkdir -p /usr/share/man/man1 \
