@@ -1,4 +1,4 @@
-FROM debian:buster-slim
+FROM debian:stable-slim
 
 COPY ./server.properties /
 COPY ./start.sh /
@@ -7,7 +7,7 @@ COPY ./ops.txt /
 
 RUN apt-get update \
   && mkdir -p /usr/share/man/man1 \
-  && apt-get install -y default-jdk wget jq curl
+  && apt-get install -y openjdk-17-jdk openjdk-17-jre wget jq curl
 
 RUN cd / \
   && wget https://launchermeta.mojang.com/mc/game/version_manifest.json \
